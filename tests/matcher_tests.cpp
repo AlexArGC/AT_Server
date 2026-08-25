@@ -12,6 +12,9 @@ int main() {
     assert(pattern_match("AT+CPIN", "AT+CPIN"));
 
     // Наборы символов и диапазоны.
+    assert(pattern_match("ATE[1,0]", "ATE0"));
+    assert(pattern_match("ATE[1,0]", "ATE1"));
+    assert(!pattern_match("ATE[1,0]", "ATE2"));
     assert(pattern_match("ATE[01]", "ATE0"));
     assert(pattern_match("ATE[01]", "ATE1"));
     assert(!pattern_match("ATE[01]", "ATE2"));

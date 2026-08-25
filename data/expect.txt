@@ -1,7 +1,6 @@
 # pattern=answer
 AT=OK
-ATE0=OK
-ATE1=OK
+ATE[1,0]=OK
 ATI=Manufacturer:ExampleModem\nModel:TTY-1\nOK
 AT+COPS=+COPS:0,0,"Example"
 AT+CPIN=+CPIN: READYATE
@@ -10,3 +9,5 @@ AT+MODEM[1-3]=OK
 AT+[ABC]=OK
 AT+TEST[0-9A-F]=OK
 AT+CMD[^0-9]=ERROR
+AT+ECHO.*=OK
+AT+DATA*=OK
